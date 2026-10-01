@@ -1,4 +1,4 @@
-local Library, Utility = LPH_JIT(function()
+return (function()
 	local UserInputService = game:GetService("UserInputService")
 	local RunService = game:GetService("RunService")
 	local HttpService = game:GetService("HttpService")
@@ -4451,3 +4451,5 @@ local Library, Utility = LPH_JIT(function()
 	end;
 	Env.Library = Library
 	Env.Utility = Library.Utility
+    return Library, Library.Utility
+end)()
